@@ -285,6 +285,7 @@ summary {
 	display: flex;
 	padding-bottom: 10px;
 	font-weight: bold;
+	cursor: pointer;
 }
 
 summary::before {
@@ -326,14 +327,15 @@ details[open] div {
 		opacity: 0;
 	}
 	100% {
-		opacity: 1;
+		opacity: var(--opacity);	/* Needs a var so the text doesn't flash if details[open] + .finished-event */
 	}
 }
 
 
 /* ---- Finished event ---- */
 .finished-event :is(.card-date, .card-info, .card-summary) * {
-	opacity: 0.5;
+	--opacity: 0.5;
+	opacity: var(--opacity);
 }
 
 .finished-event .portrait {
