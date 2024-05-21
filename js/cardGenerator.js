@@ -43,6 +43,7 @@ function generateEvent(container, date, title, tags, summary, eventLink, recordi
 	cardTitle.classList.add("card-title");
 	var titleText = document.createElement("h3");
 	titleText.textContent = title;
+	cardTitle.appendChild(titleText);
 	var cardTags = document.createElement("div");
 	cardTags.classList.add("card-tags");
 	/*cardTags.textContent = tags;*/
