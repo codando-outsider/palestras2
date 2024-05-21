@@ -85,7 +85,7 @@ function generateEvent(container, date, title, tags, summary, eventLink, recordi
 	cardAside.appendChild(linkButton);
 
 	var cardSummary = document.createElement("details");
-	cardSummary.classList.add("card-block, card-summary");
+	cardSummary.classList.add("card-block", "card-summary");
 
 	var summaryHeader = document.createElement("summary");
 
