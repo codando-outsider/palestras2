@@ -45,8 +45,13 @@ function generateEvent(container, date, title, tags, summary, eventLink, recordi
 	var cardTags = document.createElement("span");
 	cardTags.classList.add("card-tags");
 	/*cardTags.textContent = tags;*/
-	var cardTag = document.createElement("div");
-	cardTag.classList.add("card-tag");
+	var cardTag1 = document.createElement("div");
+	cardTag1.classList.add("card-tag", "codando");
+	var cardTag2 = document.createElement("div");
+	cardTag2.classList.add("card-tag", "negociando");
+
+	cardTags.appendChild(cardTag1);
+	cardTags.appendChild(cardTag2);
 
 	cardInfo.appendChild(cardTitle);
 	cardInfo.appendChild(cardTags);
