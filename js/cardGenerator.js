@@ -44,7 +44,10 @@ function generateEvent(container, date, title, tags, summary, eventLink, recordi
 	cardTitle.textContent = title;
 	var cardTags = document.createElement("span");
 	cardTags.classList.add("card-tags");
-	cardTags.textContent = tags;
+	/*cardTags.textContent = tags;*/
+	var cardTag = document.createElement("div");
+	cardTag.classList.add("card-tag");
+
 	cardInfo.appendChild(cardTitle);
 	cardInfo.appendChild(cardTags);
 
@@ -94,6 +97,7 @@ function generateEvent(container, date, title, tags, summary, eventLink, recordi
 
 	var summaryContainer = document.createElement("div");
 	var summaryText = document.createElement("p");
+	summaryText.classList.add("summary-text");
 	summaryText.textContent = summary;
 
 	summaryHeader.appendChild(summaryHeaderText);
