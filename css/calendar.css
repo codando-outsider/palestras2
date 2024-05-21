@@ -1,0 +1,426 @@
+:root {
+	--accent-dark: #0c002b;
+	--accent-light: dodgerblue;
+}
+
+.container {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+.title {
+	margin: 60px 0;
+	color: cornflowerblue;
+	font-weight: normal;
+	font-size: 34px;
+	font-family: Monoton, sans-serif;
+	text-align: center;
+	text-transform: uppercase;
+	text-shadow:	0 0 20px rgb(0, 0, 255, 1),
+					0 0 50px rgb(0, 0, 255, 0.5),
+					0 0 200px rgb(0, 0, 255, 0.5),
+					0 0 100px rgb(0, 0, 255, 1),
+					0 0 250px rgb(0, 0, 255, 1),
+					0 0 300px rgb(0, 0, 255, 1);
+	white-space: nowrap;
+	cursor: default;
+	animation: flicker 5s infinite alternate;
+}
+
+@keyframes flicker {
+	44%, 46%, 98%, 100% {
+		opacity: 1;
+	}
+	45%, 99% {
+		opacity: 0.7;
+	}
+}
+
+@media (width >= 400px) {
+	.title {
+		font-size: 38px;
+	}
+}
+
+@media (width >= 600px) {
+	.title {
+		font-size: 54px;
+	}
+}
+
+@media (width >= 800px) {
+	.title {
+		margin-bottom: 100px;
+		font-size: 72px;
+	}
+}
+
+@media (width >= 1024px) {
+	.title {
+		font-size: 84px;
+	}
+}
+
+
+/* ---- Card ---- */
+.card-section {
+	display: flex;
+	margin: 0 40px 20px 20px;
+}
+
+.card-date {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-width: 75px;
+	font-weight: bold;
+	line-height: 1.3;
+	text-transform: uppercase;
+	pointer-events: none;
+}
+
+.card-day {
+	font-size: 32px;
+}
+
+.card-month {
+	font-size: 16px;
+}
+
+.card-main {
+	display: grid;
+	grid-template: repeat(2, 1fr);
+}
+
+.card-block {
+	padding: 20px;
+	background-color: rgb(30, 30, 30, 0.6);
+}
+
+.card-block > *:last-child {
+	margin-bottom: 0;
+}
+
+.card-info {
+	flex: 1;
+	padding-bottom: 0;
+	pointer-events: none;
+}
+
+.card-aside {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	padding-top: 0;
+}
+
+.card-audience {
+	grid-area: auto / span 3;
+	padding-top: 0;
+}
+
+@media (width >= 600px) {
+	.card-main {
+		flex-direction: row;
+	}
+	.card-info {
+		padding-bottom: 20px;
+	}
+	.card-aside {
+		padding-top: 20px;
+	}
+}
+
+@media (width >= 1024px) {
+	.card-section {
+		margin: 0 0 20px 0;
+	}
+}
+
+
+/* ---- Info ---- */
+.card-title {
+	margin: 0;
+	font-weight: bold;
+	font-size: 16px;
+	text-align: center;
+	text-wrap: balance;
+	/*text-transform: capitalize;*/
+}
+
+.card-summary {
+	display: none;
+}
+
+@media (width >= 400px) {
+	.card-title {
+		font-size: 20px;
+	}
+}
+
+@media (width >= 600px) {
+	.card-title {
+		text-align: left;
+		text-wrap: wrap;
+	}
+	.card-summary {
+		display: block;
+		color: #aaa;
+		text-align: justify;
+		text-justify: inter-word;
+	}
+}
+
+
+/* ---- Aside ---- */
+.portrait {
+	width: 120px;
+	height: 120px;
+	margin-bottom: 20px;
+	background: #ccc center 20%/120px no-repeat;
+	border-radius: 50%;
+	border: 2px solid var(--accent-light);
+}
+
+.card-button {
+	padding: 20px 30px;
+	border: none;
+	border-radius: 22px;
+	color: black;
+	font-weight: bold;
+	text-decoration: none;
+	line-height: 4px;
+	transition: transform 0.2s;
+}
+
+.card-button:hover {
+	color: white;
+}
+
+.card-button:active {
+	outline: 0;
+	transform: scale(0.95);
+}
+
+.button-event {
+	background-color: var(--accent-light);
+}
+
+.button-recording {
+	background-color: #aaa;
+}
+
+.button-recording:hover {
+	background-color: var(--accent-light);
+}
+
+@media (width >= 600px) {
+	.card-button {
+		min-width: unset;
+	}
+}
+
+
+/* ---- Audience ---- */
+details {
+	background-color: #303030;
+	color: white;
+	font-size: 1.5rem;
+}
+
+summary {
+	display: flex;
+	padding: 0.5em 1.3rem;
+	color: white;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+summary::before {
+	content: "\2B9E";
+	display: inline-block;
+	margin-right: 10px;
+	transition: transform 0.2s;
+}
+
+summary::-webkit-details-marker {
+	display: none;
+}
+
+details[open] summary::before {
+	transform: rotate(90deg);
+}
+
+details[open] summary {
+	border-bottom: 1px solid #aaa;
+}
+
+details[open] summary ~ * {
+	animation: fade-in 1s ease-in;
+}
+
+details[open] div {
+	padding: 5px 10px;
+}
+
+details[open] p {
+	display: flex;
+	flex-direction: row;
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.tag {
+	width: fit-content;
+	margin: 0 5px;
+	background-color: var(--theme);
+	border: 1px solid color-mix(in srgb, var(--theme), white 25%);
+	border-radius: 20px;
+	font-size: 12px;
+	pointer-events: none;
+}
+
+.codando {
+	--theme: hotpink;
+}
+
+.comunicando {
+	--theme: blank;
+}
+
+.cuidando {
+	--theme: blank;
+}
+
+.desembolando {
+	--theme: blank;
+}
+
+.endireitando {
+	--theme: blank;
+}
+
+.engenheirando {
+	--theme: blank;
+}
+
+.ensinando {
+	--theme: blank;
+}
+
+.negociando {
+	--theme: navy;
+}
+
+.projetando {
+	--theme: blank;
+}
+
+.veterinando {
+	--theme: blank;
+}
+
+
+/* ---- Finished event ---- */
+.finished-event :is(.card-date, .card-info, .card-audience) * {
+	opacity: 0.5;
+}
+
+.finished-event .portrait {
+	filter: grayscale(100%);
+}
+
+.finished-event button a {
+	color: #555;
+}
+
+
+/* ---- Current event ---- */
+.current-event {
+	overflow: hidden;
+	transform: translate(0%);
+}
+
+.current-event > span {
+	position: absolute;
+}
+
+.current-event .animRight {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(to right, var(--accent-dark), var(--accent-light));
+	animation: animRight 2s linear infinite;
+}
+
+@keyframes animRight {
+	from {
+		transform: translateX(-100%);
+	}
+	to {
+		transform: translateX(100%);
+	}
+}
+
+.current-event .animDown {
+	top: 0;
+	right: 0;
+	width: 2px;
+	height: 100%;
+	background: linear-gradient(to bottom, var(--accent-dark), var(--accent-light));
+	animation: animDown 2s linear 1s infinite;
+}
+
+@keyframes animDown {
+	from {
+		transform: translateY(-100%);
+	}
+	to {
+		transform: translateY(100%);
+	}
+}
+
+.current-event .animLeft {
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(to left, var(--accent-dark), var(--accent-light));
+	animation: animLeft 2s linear infinite;
+}
+
+@keyframes animLeft {
+	from {
+		transform: translateX(100%);
+	}
+	to {
+		transform: translateX(-100%);
+	}
+}
+
+.current-event .animUp {
+	bottom: 0;
+	left: 0;
+	width: 2px;
+	height: 100%;
+	background: linear-gradient(to top, var(--accent-dark), var(--accent-light));
+	animation: animUp 2s linear 1s infinite;
+}
+
+@keyframes animUp {
+	from {
+		transform: translateY(100%);
+	}
+	to {
+		transform: translateY(-100%);
+	}
+}
