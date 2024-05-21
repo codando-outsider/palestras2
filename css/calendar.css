@@ -89,7 +89,9 @@
 
 .card-main {
 	display: grid;
-	grid-template: repeat(2, 1fr);
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-areas: "a a a b" "a a a b" "c c c c";
+	width: 100%;
 }
 
 .card-block {
@@ -102,29 +104,28 @@
 }
 
 .card-info {
-	flex: 1;
+	grid-area: a;
 	padding-bottom: 0;
 	pointer-events: none;
 }
 
 .card-aside {
+	grid-area: b;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
 	align-items: center;
-	padding-top: 0;
 }
 
 .card-summary {
-	grid-area: auto / span 3;
+	grid-area: c;
 	display: none;
 	padding-top: 0;
+	padding-bottom: 0;
 }
 
-.summary-text {
-	color: #aaa;
-	text-align: justify;
-	text-justify: inter-word;
+.card-summary > * {
+	position: relative;
+	top: -30px;
 }
 
 @media (width >= 600px) {
@@ -139,9 +140,6 @@
 	}
 	.card-info {
 		padding-bottom: 20px;
-	}
-	.card-aside {
-		padding-top: 20px;
 	}
 }
 
@@ -283,18 +281,10 @@
 
 
 /* ---- Summary ---- */
-details {
-	background-color: #303030;
-	color: white;
-	font-size: 1.5rem;
-}
-
 summary {
 	display: flex;
-	padding: 0.5em 1.3rem;
-	color: white;
+	padding-bottom: 10px;
 	font-weight: bold;
-	cursor: pointer;
 }
 
 summary::before {
@@ -304,8 +294,12 @@ summary::before {
 	transition: transform 0.2s;
 }
 
-summary::-webkit-details-marker {
+details {
 	display: none;
+}
+
+details[open] {
+	display: unset;
 }
 
 details[open] summary::before {
@@ -322,11 +316,9 @@ details[open] summary ~ * {
 
 details[open] div {
 	padding: 5px 10px;
-}
-
-details[open] p {
-	display: flex;
-	flex-direction: row;
+	color: #aaa;
+	text-align: justify;
+	text-justify: inter-word;
 }
 
 @keyframes fade-in {
@@ -340,7 +332,7 @@ details[open] p {
 
 
 /* ---- Finished event ---- */
-.finished-event :is(.card-date, .card-info, .card-audience) * {
+.finished-event :is(.card-date, .card-info, .card-summary) * {
 	opacity: 0.5;
 }
 
