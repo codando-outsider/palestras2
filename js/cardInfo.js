@@ -12,8 +12,8 @@ generateEvent(
 generateEvent(
 	container,
 	"2024-05-21",
-	"",
 	"Preparados ou Desafiados? Educação e Mercado de Trabalho",
+	"",
 	"Marcos Toledo, autoridade nos campos da Educação e do Direito com vasta experiência acadêmica e prática, irá compartilhar insights valiosos sobre como navegar no mundo profissional, destacando a importância de uma educação relevante e adaptável em meio às exigências do mercado contemporâneo.",
 	"https://www.sympla.com.br/evento-online/preparados-ou-desafiados-educacao-e-o-mercado-de-trabalho/2425667",
 	"https://animaeducacao.zoom.us/rec/share/pQKH1VL7TNRMIXxTXX6pBEdMpKFKspiZQe7i84pMAqTKOVZszE9TnStMt1EFZuA.MKHeRUWGv4u85mSn"
@@ -39,8 +39,8 @@ generateEvent(
 generateEvent(
 	container,
 	"2024-04-27",
-	"",
 	"Transformando seu LinkedIn em um Ímã para Recrutadores",
+	"",
 	"Samara Souza, especialista em Recursos Humanos com experiência em Recrutamento & Seleção e consultoria de carreira, irá compartilhar suas dicas exclusivas e estratégias para tornar seu perfil no LinkedIn verdadeiramente memorável e atraente para os recrutadores.",
 	"https://www.sympla.com.br/evento-online/transformando-seu-linkedin-em-um-ima-para-recrutadores/2425446",
 	"https://animaeducacao.zoom.us/rec/share/CXP0uHtJQ6NO7SpXl1VsmiGnewdm32zrwRxp2bfdeTAWZdyTCZ2lKQ_vXKqNytde.X_Eg4nlnVUkJTfOb"
@@ -48,8 +48,8 @@ generateEvent(
 generateEvent(
 	container,
 	"2024-04-20",
-	"",
 	"Definição e Evolução do Empreendedorismo",
+	"",
 	"Abdel Hach, coordenador da Equipe de Conformidade Regulatória na Ecorys Soluções Empresariais com extensa experiência em engenharia geotécnica e compliance empresarial, irá explorar o mundo do empreendedorismo sob a perspectiva de sua definição, evolução e impacto global, oferecendo insights profundos sobre os diversos aspectos do empreendedorismo, desde os diferentes tipos e processos até a inovação, gestão de riscos e responsabilidade social.",
 	"https://www.sympla.com.br/evento-online/definicao-e-evolucao-do-empreendedorismo/2424889",
 	"https://animaeducacao.zoom.us/rec/share/mNm_mqWejdl3MPPEb-kLLCM4LeoVJFIWblErFtBQ7sokwTAqUCjxeUTapjgY1F1B.xk13pbR9EYhTCYP5"
@@ -57,8 +57,8 @@ generateEvent(
 generateEvent(
 	container,
 	"2024-04-04",
-	"",
 	"Planejamento Financeiro Pessoal de Forma Prática",
+	"",
 	"Jade Gomes, renomada especialista em planejamento financeiro pessoal e investimentos, irá compartilhar seus insights valiosos sobre como descomplicar o processo de planejamento financeiro pessoal em apenas alguns passos.",
 	"https://www.sympla.com.br/evento-online/descomplicando-o-planejamento-financeiro-pessoal-em-poucos-passos/2397857",
 	"https://animaeducacao.zoom.us/rec/share/0bFPZU-ssqLhIF7Fwpg_6NInfE585d7GVB8nKgae9BOB2-e-Ac-H9fprM6bS8UaV.yyLOYg9JkX1kOa7B"
