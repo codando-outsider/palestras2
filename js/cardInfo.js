@@ -11,7 +11,7 @@ generateEvent(
 );
 generateEvent(
 	container,
-	"2024-05-21",
+	"2024-05-22",
 	"Preparados ou Desafiados? Educação e Mercado de Trabalho",
 	"",
 	"Marcos Toledo, autoridade nos campos da Educação e do Direito com vasta experiência acadêmica e prática, irá compartilhar insights valiosos sobre como navegar no mundo profissional, destacando a importância de uma educação relevante e adaptável em meio às exigências do mercado contemporâneo.",
