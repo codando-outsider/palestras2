@@ -89,8 +89,11 @@
 
 .card-main {
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	grid-template-areas: "a a a b" "a a a b" "c c c c";
+	grid-template-columns: 3fr 1fr;
+	grid-template-areas:
+		"info side"
+		"info side"
+		"summ summ";
 	width: 100%;
 }
 
@@ -104,20 +107,20 @@
 }
 
 .card-info {
-	grid-area: a;
+	grid-area: info;
 	padding-bottom: 0;
 	pointer-events: none;
 }
 
 .card-aside {
-	grid-area: b;
+	grid-area: side;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 
 .card-summary {
-	grid-area: c;
+	grid-area: summ;
 	display: none;
 	padding-top: 0;
 	padding-bottom: 0;
@@ -169,7 +172,7 @@
 	width: fit-content;
 	margin-right: 5px;
 	padding: 5px 10px;
-	background-color: var(--theme);
+	background: linear-gradient(var(--theme), color-mix(in srgb, var(--theme), black 50%));
 	border: 1px solid color-mix(in srgb, var(--theme), white 25%);
 	border-radius: 20px;
 	font-size: 12px;

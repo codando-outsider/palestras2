@@ -107,7 +107,6 @@ function generateEvent(container, date, title, tags, summary, eventLink, recordi
 
 	var summaryContainer = document.createElement("div");
 	var summaryText = document.createElement("p");
-	summaryText.classList.add("summary-text");
 	summaryText.textContent = summary;
 
 	summaryHeader.appendChild(summaryHeaderText);
