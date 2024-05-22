@@ -171,40 +171,39 @@
 .tag {
 	width: fit-content;
 	margin-right: 5px;
-	padding: 5px 10px;
-	background: linear-gradient(var(--theme), color-mix(in srgb, var(--theme), black 50%));
-	border: 1px solid color-mix(in srgb, var(--theme), white 25%);
-	border-radius: 20px;
+	padding: 2px 10px;
+	background: linear-gradient(var(--theme), color-mix(in srgb, var(--theme), black 70%));
+	border-radius: 999px;
 	font-size: 12px;
 	pointer-events: none;
 }
 
 .codando {
-	--theme: hotpink;
+	--theme: indianred;
 }
 
 .comunicando {
-	--theme: blank;
+	--theme: mediumorchid;
 }
 
 .cuidando {
-	--theme: blank;
+	--theme: khaki;
 }
 
 .desembolando {
-	--theme: blank;
+	--theme: darkorange;
 }
 
 .endireitando {
-	--theme: blank;
+	--theme: black;
 }
 
 .engenheirando {
-	--theme: blank;
+	--theme: midnightblue;
 }
 
 .ensinando {
-	--theme: blank;
+	--theme: steelblue;
 }
 
 .negociando {
@@ -212,11 +211,11 @@
 }
 
 .projetando {
-	--theme: blank;
+	--theme: magenta;
 }
 
 .veterinando {
-	--theme: blank;
+	--theme: seagreen;
 }
 
 @media (width >= 400px) {
@@ -326,10 +325,10 @@ details[open] div {
 }
 
 @keyframes fade-in {
-	0% {
+	from {
 		opacity: 0;
 	}
-	100% {
+	to {
 		opacity: var(--opacity);	/* Needs a var so the text doesn't flash if details[open] + .finished-event */
 	}
 }
